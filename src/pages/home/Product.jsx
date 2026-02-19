@@ -53,7 +53,7 @@ export function Product({product,loadCart}){
                 </div>
 
                 <button className="add-to-cart-button button-primary" onClick={ async() =>{
-                   await axios.post('http://localhost:3000/api/cart-items', {
+                   await axios.post('https://react-ecommerce-backend-update.onrender.com/api/cart-items', {
                     productId: product.id, quantity: quantity
                     
                   } )

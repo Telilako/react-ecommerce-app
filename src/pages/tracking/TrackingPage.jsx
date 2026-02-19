@@ -12,7 +12,7 @@ export function TrackingPage({cart}){
   const [orders, setOrders] = useState([]);
     useEffect(() => {
       const getTrackOrderData = async() => {
-        const response = await axios(`http://localhost:3000/api/orders/${orderId}?expand=products`);
+        const response = await axios(`https://react-ecommerce-backend-update.onrender.com/api/orders/${orderId}?expand=products`);
         setOrders([response.data]);
 
       }

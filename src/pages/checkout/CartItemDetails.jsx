@@ -9,12 +9,12 @@ export function CartItemDetails({cartItem,loadCart}) {
     setInput(true);
     return;
   }
-  await axios.put(`http://localhost:3000/api/cart-items/${cartItem.productId}`, {quantity: Number(quantity)});
+  await axios.put(`https://react-ecommerce-backend-update.onrender.com/api/cart-items/${cartItem.productId}`, {quantity: Number(quantity)});
   await loadCart();
   setInput(false);
  }
   const deleteCartItem = async() => {
-    await axios.delete(`http://localhost:3000/api/cart-items/${cartItem.productId}`);
+    await axios.delete(`https://react-ecommerce-backend-update.onrender.com/api/cart-items/${cartItem.productId}`);
     await loadCart();
   }
   return (

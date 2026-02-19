@@ -9,7 +9,7 @@ import './App.css'
 import { Routes, Route } from 'react-router';
 function App() {
   const loadCart = async () => {
-    const response =  await axios('http://localhost:3000/api/cart-items?expand=product');
+    const response =  await axios('https://react-ecommerce-backend-update.onrender.com/api/cart-items?expand=product');
        setCart(response.data)
     }
    const [cart, setCart] =useState([]);

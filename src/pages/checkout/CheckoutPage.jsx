@@ -9,7 +9,7 @@ export function CheckoutPage({cart, loadCart}){
   const [paymentSummary, setPaymentSummary] = useState([]);
   useEffect(() =>{
   const getDeliveryData = async () => {
-   const response = await axios('http://localhost:3000/api/delivery-options?expand=estimatedDeliveryTime');
+   const response = await axios('https://react-ecommerce-backend-update.onrender.com/api/delivery-options?expand=estimatedDeliveryTime');
    setDeliveryOptions(response.data)
   }
   getDeliveryData();
@@ -18,7 +18,7 @@ export function CheckoutPage({cart, loadCart}){
 
   useEffect(() => {
     const getPaymentData = async () => {
-   const response = await axios('http://localhost:3000/api/payment-summary');
+   const response = await axios('https://react-ecommerce-backend-update.onrender.com/api/payment-summary');
   setPaymentSummary(response.data)
   }
   getPaymentData();

@@ -8,7 +8,7 @@ export function OrderDetailGrid({order,loadCart}) {
     <div className="order-details-grid">
               {order.products.map((orderProduct) => {
                 const addToCart = async() =>{
-    await axios.post('http://localhost:3000/api/cart-items', {
+    await axios.post('https://react-ecommerce-backend-update.onrender.com/api/cart-items', {
       productId: orderProduct.product.id,
       quantity:1
     })

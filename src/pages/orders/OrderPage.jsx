@@ -8,7 +8,7 @@ export function OrderPage({cart, loadCart}) {
   const [orders, setOrders] = useState([]);
   useEffect(() => {
   const getOrdersData = async () => {
-    const response = await axios('http://localhost:3000/api/orders?expand=products');
+    const response = await axios('https://react-ecommerce-backend-update.onrender.com/api/orders?expand=products');
   setOrders(response.data);
   }
   getOrdersData();

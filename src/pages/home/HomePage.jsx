@@ -11,7 +11,7 @@ export function HomePage({cart,loadCart}) {
   useEffect( () =>
   {
     const getHomeData = async() => {
-      const url = search? `http://localhost:3000/api/products?search= ${search}`:'http://localhost:3000/api/products'
+      const url = search? `https://react-ecommerce-backend-update.onrender.com/api/products?search= ${search}`:'https://react-ecommerce-backend-update.onrender.com/api/products'
       const response = await axios(url);
      setProducts(response.data);
     }
